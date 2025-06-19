@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 900px;
+    width: 90%;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* --- ĐÃ SỬA ĐỔI/THÊM MỚI --- */
+
+/* Container cho các nút để chúng nằm trên một hàng */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Khoảng cách giữa các nút */
+    margin-bottom: 15px;
+}
+
+/* Style chung cho các nút */
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover:not(:disabled) {
+    transform: translateY(-2px); /* Hiệu ứng nhấc lên khi hover */
+}
+
+/* Style riêng cho nút Upload */
+.upload-button {
+    background-color: #007bff; /* Xanh dương */
+    color: white;
+}
+.upload-button:hover {
+    background-color: #0056b3;
+}
+
+/* Style riêng cho nút Download */
+.download-button {
+    background-color: #28a745; /* Xanh lá */
+    color: white;
+}
+.download-button:hover:not(:disabled) {
+    background-color: #218838;
+}
+
+/* Style khi nút bị vô hiệu hóa */
+.button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#osmdCanvas {
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+}

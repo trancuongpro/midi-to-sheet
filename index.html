@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển MIDI Thành MusicXML</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/midi-parser-js@4.0.4/src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/opensheetmusicdisplay@1.9.0/build/opensheetmusicdisplay.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Chuyển Đổi MIDI Thành MusicXML</h1>
+        
+        <div class="controls">
+            <!-- Nút Upload tùy chỉnh -->
+            <label for="fileInput" class="button upload-button">Upload File MIDI</label>
+            <input type="file" id="fileInput" accept=".mid,.midi" hidden>
+
+            <!-- Nút Tải về mới -->
+            <button id="downloadButton" class="button download-button" disabled>Tải Về MusicXML</button>
+        </div>
+        
+        <p id="fileInfo"></p>
+        <div id="osmdCanvas" style="width: 100%; height: auto;"></div>
+        <!-- Thẻ <a> ở đây đã được loại bỏ -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
